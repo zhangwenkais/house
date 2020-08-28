@@ -1,0 +1,47 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    <mapper namespace="aaa.com.Dao.StatisDao">
+
+    <!--<resultMap id="Statistics" type="aaa.com.Entity.Statistics">
+        <id column="sid" property="sid"></id>
+        <result column="h_id_sta" property="h_id_sta"></result>
+        <result column="smoney" property="smoney"></result>
+        <association property="house_info" javaType="aaa.com.Entity.House_info">
+            <id column="h_id" property="h_id"></id>
+            <result column="h_pid" property="h_pid"></result>
+            <result column="h_aid" property="h_aid"></result>
+            <result column="h_tid" property="h_tid"></result>
+            <result column="flors" property="flors"></result>
+            <result column="counts" property="counts"></result>
+            <result column="type_room" property="type_room"></result>
+            <result column="type_hall" property="type_hall"></result>
+            <result column="type_toilet" property="type_toilet"></result>
+            <result column="fitment" property="fitment"></result>
+            <result column="area" property="area"></result>
+            <result column="year" property="year"></result>
+            <result column="land" property="land"></result>
+            <result column="deal" property="deal"></result>
+            <result column="create" property="create"></result>
+            <result column="cases" property="cases"></result>
+            <result column="facility" property="facility"></result>
+            <result column="images" property="images"></result>
+            <result column="letset" property="letset"></result>
+            <result column="state" property="state"></result>
+            <result column="h_cusid" property="h_cusid"></result>
+            <result column="dateissued" property="dateissued"></result>
+            <result column="date_make" property="date_make"></result>
+        </association>
+    </resultMap>
+    -->
+
+    <select id="queryStatis" resultType="aaa.com.Entity.Statistics" >
+        <!--select sta.sid,sta.h_id_sta,sta.smoney,house.h_id,house.dateissued,house.date_make
+        from statistics sta
+        LEFT JOIN house_info house
+        on sta.h_id_sta = house.h_id
+        -->
+        select sid,h_id_sta,smoney,date_issued,date_make from statistics
+    </select>
+
+</mapper>
